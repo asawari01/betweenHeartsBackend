@@ -10,11 +10,6 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-const options = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem')
-};
-
 // MiddleWare
 app.use(cors());
 
