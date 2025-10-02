@@ -16,11 +16,7 @@ const options = {
 };
 
 // MiddleWare
-app.use(cors({
-  origin: 'http://localhost:3000',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type'],
-}));
+app.use(cors());
 
 app.use(express.json());
 
@@ -33,6 +29,6 @@ app.get('/', (req, res) => {
 });
 
 // start the server
-https.createServer(options, app).listen(PORT, () => {
-    console.log(`Server is running on PORT${PORT}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
