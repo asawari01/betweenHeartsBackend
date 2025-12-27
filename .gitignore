@@ -4,3 +4,7 @@ nodu_modules/
 # SSL/TLS certificates
 key.pem
 cert.pem
+
+# secrets
+*.pem
+*.key
